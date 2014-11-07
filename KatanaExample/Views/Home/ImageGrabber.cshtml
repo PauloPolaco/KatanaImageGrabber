@@ -1,0 +1,24 @@
+﻿@model KatanaWebAPI.Models.ImagesModel
+@{
+    ViewBag.Title = "Image Grabber";
+}
+
+<br /><br />
+<h1>Katana Image Grabber Sample</h1>
+<br /><br />
+
+@foreach(var image in Model.Images)
+{
+    <img src="@image" />
+    @Html.Raw("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+}
+
+<br /><br /><br />
+<p style="font-size:larger;">
+    You should see 3 images showing the letters A, B and C when everything is setup correctly.
+    <br /><br />
+    This example shows how you can grab image links from an OWEN based service.
+    Please make sure you have the server (KatanaService.exe) up and running before you run this example.
+    The JSON data objects can be accessed directly by connecting to the Katana Service at 
+    <a href="http://localhost:8080/api/images">http://localhost:8080/api/images</a>.
+</p>
